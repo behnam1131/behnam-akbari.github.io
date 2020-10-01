@@ -12,7 +12,7 @@ title: TS
     var leftToRight = users.Aggregate(initialValue, (a, u) => /* ... */);
 }
 ```
-```TypeScript
+```js
 {
     const leftToRight = users.reduce((a, u) => /* ... */, initialValue);
     const rightToLeft = users.reduceRight((a, u) => /* ... */, initialValue);
