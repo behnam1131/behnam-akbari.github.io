@@ -9,5 +9,5 @@ links:
 - title: C#
   url: csharp
 
-  - title: TS
-  url: TypeScript
+- title: TS
+url: typeScript
