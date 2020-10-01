@@ -72,3 +72,22 @@ SUM(S.SubTotal) OVER (PARTITION BY S.CustomerID ORDER BY S.SalesOrderID) AS SubT
 FROM Sales.SalesOrderHeader S
 GO
 ```
+
+## Analytical Function
+
+#### LEAD  استفاده از سطر بعدی برای رکورد جاری
+
+
+```sql
+    LEAD (Expression [offset] [default])
+    OVER ( [ <PARTITION BY clause> ]  
+           [ <ORDER BY clause> ]) 
+```
+#### LAG  استفاده از سطر قبلی برای رکورد جاری
+
+
+```sql
+    LAG (Expression [offset] [default])
+    OVER ( [ <PARTITION BY clause> ]  
+           [ <ORDER BY clause> ]) 
+```
