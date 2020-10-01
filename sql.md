@@ -3,7 +3,7 @@ title: Sql Server
 ---
 
 
-##   ترتیب اجرای Query
+## Order EXEC Query
 
 ```sql
 From - Where - Group By - Having - Select - Order By
