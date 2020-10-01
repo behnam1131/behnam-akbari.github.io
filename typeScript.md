@@ -1,5 +1,5 @@
 ---
-title: TypeScript
+title: TS
 ---
 
 
