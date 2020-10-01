@@ -50,7 +50,12 @@ ROW_NUMBER() OVER (PARTITION BY S.TerritoryID  ORDER BY S.SalesOrderID) as RowNO
 FROM Sales.SalesOrderHeader S
 ) d ORDER BY d.RowNO
 GO 
+```
 
+
+```sql
+RANK() --با کپ
+DENSE_RANK() -- بدون کپ
 ```
 
 
