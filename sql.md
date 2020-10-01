@@ -12,7 +12,8 @@ From - Where - Group By - Having - Select - Order By
 ## Window Function
 
 ```list
-بد
+ کار کردن بر روی مجموعه ای از رکورد ها-1
+ 2-گروه بندی رکورد های یک جدول
 ```
 
 
