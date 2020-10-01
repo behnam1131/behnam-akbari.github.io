@@ -27,6 +27,18 @@ OVER (
 
 ORDER BY اجباری است.
 
+```sql
+USE AdventureWorks2016
+GO
+
+SELECT
+ROW_NUMBER() OVER (PARTITION BY S.TerritoryID  ORDER BY S.SalesOrderID) as RowNO,
+*
+FROM Sales.SalesOrderHeader S
+GO
+
+```
+
 
 ## SQL
 
