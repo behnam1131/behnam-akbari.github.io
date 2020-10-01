@@ -6,6 +6,23 @@ title: TS
 # TypeScript
 
 
+## Concat
+```csharp
+    var allUsers = users.Concat(moreUsers);
+```
+```js
+    const allUsers = [ ...users, ...moreUsers ];
+```
+
+
+## Contains
+```csharp
+    var hasAdmin = users.Contains(admin);
+```
+```js
+    const hasAdmin = users.includes(admin);
+```
+
 ## All
 ```csharp
     var allReady = users.All(u => u.IsReady);
@@ -31,6 +48,19 @@ title: TS
         throw new Error('source contains no elements');
     }
     const avgAge = users.reduce((a, u) => a + u.age, 0) / users.length;
+```
+
+## Distinct
+```csharp
+    var uniqueNames = users.Select(u => u.Name).Distinct();
+```
+```js
+    const uniqueNames = Object.keys(
+        users.map(u => u.name).reduce(
+            (un, u) => ({ ...un, n }),
+            {}
+        )
+    );
 ```
 
 ## Aggregate
