@@ -9,6 +9,12 @@ title: Sql Server
 From - Where - Group By - Having - Select - Order By
 ```
 
+## Window Function
+
+```list
+بد
+```
+
 
 ## SQL
 
