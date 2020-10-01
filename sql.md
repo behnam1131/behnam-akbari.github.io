@@ -60,8 +60,15 @@ NTILE(8) --   گروه بندی (به 8 گروه تقسیم  میکند)
 ```
 
 
-## SQL
+
+## Window Aggregates
 
 ```sql
-SELECT COUNT(*) FROM Students
+USE AdventureWorks2016
+GO
+SELECT
+S.CustomerID,S.SalesOrderID, CAST(S.OrderDate AS date) AS OrderDate,S.SubTotal,
+SUM(S.SubTotal) OVER (PARTITION BY S.CustomerID ORDER BY S.SalesOrderID) AS SubTotal
+FROM Sales.SalesOrderHeader S
+GO
 ```
