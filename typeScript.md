@@ -7,7 +7,7 @@ title: TS
 
 ## Aggregate
 
-```C#
+```Cs
 var leftToRight = users.Aggregate(initialValue, (a, u) => /* ... */);
 ```
 ```TS
