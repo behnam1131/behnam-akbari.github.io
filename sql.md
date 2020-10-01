@@ -16,6 +16,15 @@ From - Where - Group By - Having - Select - Order By
  2-گروه بندی رکورد های یک جدول
 ```
 
+```sql
+window_Function() 
+OVER (   
+       [ <PARTITION BY clause> ]  
+       [ <ORDER BY clause> ]   
+       [ <ROW or RANGE clause> ]  
+      ) 
+```
+
 
 ## SQL
 
