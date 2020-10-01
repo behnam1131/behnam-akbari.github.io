@@ -2,7 +2,8 @@
 title: Sql Server
 ---
 
-SQL
+## SQL
+
 ```sql
 SELECT COUNT(*) FROM Students
 ```
