@@ -73,12 +73,7 @@ title: TS
 ```
 ##### TS
 ```js
-    const uniqueNames = Object.keys(
-        users.map(u => u.name).reduce(
-            (un, u) => ({ ...un, n }),
-            {}
-        )
-    );
+const uniqueNames = users.filter((v, i, a) => a.findIndex(t => (t.id === v.id)) === i);   
 ```
 
 ## Aggregate
