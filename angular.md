@@ -17,5 +17,6 @@ title: angular
 ```
 
 ```img
+![](//_data/img/textSearch.png)
 ![alt text](/_data/img/textSearch.png)
 ```
