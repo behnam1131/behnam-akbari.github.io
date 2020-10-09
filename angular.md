@@ -15,4 +15,6 @@ title: angular
 
   this.subject.next(1);
 ```
-![_data/img/textSearch](_data/img/textSearch){: .center-image }
+
+
+![_data/img/textSearch](_data/img/textSearch.PNG){: .center-image }
