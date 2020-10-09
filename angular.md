@@ -17,4 +17,4 @@ title: angular
 ```
 
 
-![_data/img/textSearch](_data/img/textSearch.PNG){: .center-image }
+![image/textSearch](image/textSearch.PNG){: .center-image }
