@@ -15,3 +15,7 @@ title: angular
 
   this.subject.next(1);
 ```
+
+```img
+![alt text](/_data/img/textSearch.png)
+```
