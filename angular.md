@@ -15,8 +15,4 @@ title: angular
 
   this.subject.next(1);
 ```
-
-```img
-![](//_data/img/textSearch.png)
-![alt text](/_data/img/textSearch.png)
-```
+![_data/img/textSearch](_data/img/textSearch){: .center-image }
