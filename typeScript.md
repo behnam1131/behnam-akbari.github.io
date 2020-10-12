@@ -16,6 +16,22 @@ title: TS
 ```js
     const allUsers = [ ...users, ...moreUsers ];
 ```
+## Sort
+
+##### C#
+```csharp
+    var sorted = users.OrderBy(u => u.Age).ThenBy(u => u.Name);
+```
+##### TS
+```js
+    const sorted = users.sort((a, b) => {
+    const ageDiff = b.age - a.age;
+    if (ageDiff) 
+        return ageDiff;
+    return a.name.localeCompare(b.name); 
+});
+```
+
 
 
 ## Contains
