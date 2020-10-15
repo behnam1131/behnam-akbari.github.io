@@ -118,7 +118,7 @@ default مقدار پیش فرض برای رکوردهای قبلی یا بعد�
 
 
 
-## OUTPUT 
+## OUTPUT   FOR INSERT - UPDATE - DELETE - MERGE
 
 ```sql
 -- گرفتن دیتا اضافه شده بلافاصله بعد از اضافه شدن در دیتابیس
@@ -126,5 +126,54 @@ default مقدار پیش فرض برای رکوردهای قبلی یا بعد�
   OUTPUT inserted.*
   VALUES(6,'Cust 6', '(666) 666-6666')
 
+  UPDATE Orders SET Country='IRAN'
+  OUTPUT deleted.*,inserted.*
+  WHERE OrderID = 10
+
+  DELETE Orders 
+  OUTPUT deleted.*
+  WHERE OrderID = 10
+
 ```
 
+## UBDATE BY JOIN
+
+```sql
+UPDATE OD SET OD.Discount=0.5
+FROM [OrderDetails] OD
+INNER JOIN Orders O ON OD.OrderID = O.OrderID
+INNER JOIN Customers C ON O.CustomerID = C.CustomerID
+WHERE c.Country = 'UK'
+```
+
+## DELETE BY JOIN
+
+```sql
+DELETE FROM OD 
+FROM [OrderDetails] OD
+INNER JOIN Orders O ON OD.OrderID = O.OrderID
+INNER JOIN Customers C ON O.CustomerID = C.CustomerID
+WHERE c.Country = 'UK'
+```
+
+## TRUNCATE  
+
+```sql
+--برای پاک کردن با سرعت بالا با رعایت شرایط
+TRUNCATE FROM Orders 
+```
+
+## BULK INSERT  
+
+```sql
+BULK INSERT Students
+FROM 'C:\Dump\Students.txt'
+WITH
+(
+       KEEPIDENTITY,
+       FIRSTROW=1,
+       FIELDTERMINATOR=',',
+       ROWTERMINATOR='\n'
+)
+GO
+```
