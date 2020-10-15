@@ -3,6 +3,12 @@ title: Sql Server
 ---
 
 
+## Order Query
+
+```sql
+Select - From - Where - Group By - Having - Order By
+```
+
 ## Order EXEC Query
 
 ```sql
