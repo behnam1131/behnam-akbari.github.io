@@ -115,3 +115,16 @@ default مقدار پیش فرض برای رکوردهای قبلی یا بعد�
   SELECT * INTO NewTable From OldTable WHERE 1=2     --بدون دیتا
 
 ```
+
+
+
+## OUTPUT 
+
+```sql
+-- گرفتن دیتا اضافه شده بلافاصله بعد از اضافه شدن در دیتابیس
+  INSERT INTO Customers(CustID,CompanyName,Phone)
+  OUTPUT inserted.*
+  VALUES(6,'Cust 6', '(666) 666-6666')
+
+```
+
