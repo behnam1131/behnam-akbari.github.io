@@ -42,7 +42,11 @@ https://github.com/sandikbarr/rxjs-todo
 ```js
 const appRoutes: Routes = [
   {path: '', component: InstructionsComponent},
-  
+  {path: 'login', component: LoginComponent, children: [
+      {path: '', component: LoginUserComponent},
+      {path: 'login', component: LoginUserComponent},
+      {path: 'forgot', component: ResetPasswordComponent}
+    ]},
   {path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule'},
   {path: 'products', loadChildren: 'app/Products/products.module#ProductsModule'}
 ];
