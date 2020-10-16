@@ -23,3 +23,16 @@ title: angular
 ```link
 https://github.com/sandikbarr/rxjs-todo
 ```
+
+
+## Router
+
+```js
+<nav style="text-align:center">
+  <button routerLink="login" routerLinkActive="selected-route">Login</button>
+  <button routerLink="forgot" routerLinkActive="selected-route">Forgot Password</button>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
+```
