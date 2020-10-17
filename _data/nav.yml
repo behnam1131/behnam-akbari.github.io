@@ -1,5 +1,8 @@
 links:
 
+  title: ES6
+  url: ES6
+
 - title: Home
   url: /
 
@@ -15,5 +18,4 @@ links:
 - title: angular
   url: angular
 
-  title: ES6
-  url: ES6
+  
