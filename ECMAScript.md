@@ -36,3 +36,17 @@ title: ECMAScript
    console.log(set); // 4,2,3,6,5,1 
   
 ```
+
+## Iterators
+```js
+   var title = 'ES6';
+
+   var iterateId = title[Symbol.iterator]();
+
+   console.log(iterateId.next().value);  // E
+   console.log(iterateId.next().value);  // S
+   console.log(iterateId.next().value);  // 6
+   console.log(iterateId.next().value);  // undefined
+
+```
+
