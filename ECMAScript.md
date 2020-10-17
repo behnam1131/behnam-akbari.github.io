@@ -13,6 +13,8 @@ title: ECMAScript
    course.set('jest' , {description : 'testing'});
 
    console.log(course.get('react'));
+   console.log(course.keys());
+   console.log(course.values());
 ```
 
 ## Set()
