@@ -3,7 +3,7 @@ title: angular
 ---
 
 
-## RxJS
+## RxJS 
 
 ```js
   private subject = new Subject();
