@@ -1,9 +1,6 @@
 links:
 
-  
-  title: ECMAScript
-  url: ECMAScript
-
+   
 - title: Home
   url: /
 
@@ -18,5 +15,9 @@ links:
 
 - title: angular
   url: angular
+  
+- title: ECMAScript
+  url: ECMAScript
+
 
   
