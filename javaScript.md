@@ -1,13 +1,13 @@
 ---
-title: Java Script
+title: JavaScript
 ---
 
 
 ## Equal
 
-
+```
     https://dorey.github.io/JavaScript-Equality-Table/
-
+```
 
 ```js
 new Array(0);     =>    []
