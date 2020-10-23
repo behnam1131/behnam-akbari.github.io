@@ -12,6 +12,4 @@ title: JavaScript
 ```js
 new Array(0);     =>    []
 new Array(0,1)    =>    [0,1]
-
-
 ```
