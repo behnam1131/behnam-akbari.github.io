@@ -14,6 +14,11 @@ title: ASP.Net Core
   });
 
   this.subject.next(1);
+  //////////////////////////////////////
+  switchMap And mergeMap
+  
+  https://stackblitz.com/edit/typescript-lviwcx?file=index.ts&devtoolsheight=100
+  
 ```
 
 
