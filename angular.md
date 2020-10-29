@@ -1,5 +1,5 @@
 ---
-title: angular
+title: ASP.Net Core
 ---
 
 
