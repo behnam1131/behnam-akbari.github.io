@@ -6,6 +6,22 @@ title: TS
 # TypeScript
 
 
+
+## Max
+
+##### C#
+```csharp
+var oldestAge = users.Max(u => u.Age);
+```
+##### TS
+```js
+if (users.length < 1) {
+  throw new Error('source contains no elements');
+}
+const oldestAge = users.reduce((oa, u) => Math.max(oa, u.age), 0);
+```
+
+
 ## Concat
 
 ##### C#
@@ -102,4 +118,24 @@ const uniqueNames = users.filter((v, i, a) => a.findIndex(t => (t.id === v.id)) 
 ```js
     const leftToRight = users.reduce((a, u) => /* ... */, initialValue);
     const rightToLeft = users.reduceRight((a, u) => /* ... */, initialValue);
+```
+
+## groupBy
+
+##### C#
+```csharp
+    var allUsers = users.Concat(moreUsers);
+```
+##### TS
+```js
+     let group = data.reduce((previous, current) => {
+        if (!previous[current['title']]) {
+          previous[current['title']] = [current];
+        } else {
+          previous[current['title']].push(current);
+        }
+        return previous;
+      }, {});
+
+      groupData = Object.keys(group).map(key => ({ key, value: group[key] }));
 ```
