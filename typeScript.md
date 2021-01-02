@@ -97,6 +97,20 @@ const oldestAge = users.reduce((oa, u) => Math.max(oa, u.age), 0);
     const avgAge = users.reduce((a, u) => a + u.age, 0) / users.length;
 ```
 
+## Sum
+
+##### C#
+```csharp
+   var totalYears = users.Sum(u => u.Age);
+```
+##### TS
+```js
+    if (users.length < 1) {
+    throw new Error('source contains no elements');
+    }
+    const totalYears = users.reduce((ty, u) => ty + u, 0);
+```
+
 ## Distinct
 
 ##### C#
