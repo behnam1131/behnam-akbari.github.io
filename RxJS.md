@@ -1,5 +1,5 @@
 ---
-title: rxJS
+title: RxJS
 ---
 
 
