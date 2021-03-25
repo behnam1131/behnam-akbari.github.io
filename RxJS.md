@@ -13,12 +13,13 @@ const keyCode$ = keyup$.pipe(
 ```
 
 ```ts
-```
-```ts
-```
-```ts
-```
+const source$ = of(1, 2, 3, 4, 5);
+const source2$ = range(3, 4);     // از 3 به اندازه 4 عدد میشمارد
 
+```
+```ts
+const timer$ = timer(5000,1000);    // همان interval است با تاخیر اولیه 5 ثانیه
+```
 ```ts
 const keyCodeWithPluck$ = keyup$.pipe(
   pluck("code")
@@ -44,6 +45,17 @@ const total$ = interval$.pipe(
   complete: () => console.log("complete")
 });
 ```
+```ts
+counter$.pipe(
+    mapTo(-1),
+    scan((acc, curr) => {      //  همان reduce است که در هر مرحله مقدار را برمیگرداند
+      return acc + curr;
+    }, 10),
+    tap(value => console.log(value)),
+    filter(value => value >= 0)
+  )
+```
+
 ```ts
 const name$ = state$.pipe(
   distinctUntilKeyChanged('name'),
