@@ -10,15 +10,26 @@ const keyup$ = fromEvent(document, "keyup");
 const keyCode$ = keyup$.pipe(
   map(event => event.code)
 );
-////////////////////////////
+```
+
+```ts
+```
+```ts
+```
+```ts
+```
+
+```ts
 const keyCodeWithPluck$ = keyup$.pipe(
   pluck("code")
 );
-///////////////////////////
+```
+```ts
 const space$ = keyCode$.pipe(
   filter(code => code === 'Space')
 );
-///////////////////////////
+```
+```ts
 const totalReducer = (acc, curr) => {
   return acc + curr;
 };
@@ -32,7 +43,8 @@ const total$ = interval$.pipe(
   next: console.log,
   complete: () => console.log("complete")
 });
-///////////////////////////
+```
+```ts
 const name$ = state$.pipe(
   distinctUntilKeyChanged('name'),
   // distinctUntilChanged((prev, curr) => {
@@ -40,7 +52,8 @@ const name$ = state$.pipe(
   // }),
   map(state => state.name)
 );
-///////////////////////////
+```
+```ts
 const abortClick$ = fromEvent(btn, "click");
 
 counter$.pipe(
@@ -58,7 +71,4 @@ counter$.pipe(
       message.innerHTML = "Done";
     }
   });
-  ///////////////////////////////////
-
-
 ```
