@@ -57,6 +57,7 @@ counter$.pipe(
 ```
 
 ```ts
+جلوگیری از تکرار دو ورودی پشت سر هم
 const name$ = state$.pipe(
   distinctUntilKeyChanged('name'),
   // distinctUntilChanged((prev, curr) => {
@@ -83,4 +84,25 @@ counter$.pipe(
       message.innerHTML = "Done";
     }
   });
+```
+
+```ts
+debounce(() => interval(1000)) <==> debounceTime(1000)
+
+const input$ = fromEvent(inputBox, "keyup");
+
+input$.pipe(    
+    debounceTime(1000),   // بعد از 1 ثانیه اگر مقدار جدیدی وارد نشد اجرا می شود (در هر next)
+    pluck("target", "value"),
+    distinctUntilChanged()
+  ).subscribe(console.log);
+
+```
+```ts
+throttleTime(3000)   //   چاپ مقدار اول مکث 3 ثانیه ای و سپس در صورت ورود دیتا چاپ مجدد مکث 3 ثانیه 
+
+throttleTime(3000,asyncScheduler,{   // ورود مقدار مکث 3 ثانیه و چاپ آخرین ورودی و ادامه مثله بالا
+    leading: false,
+    trailing: true
+  }),
 ```
