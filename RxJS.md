@@ -86,7 +86,14 @@ counter$.pipe(
   });
 ```
 
+
+## debounceTime
+
+
+![image/debounceTime](image/debounceTime.PNG){: .center-image }
+
 ```ts
+
 debounce(() => interval(1000)) <==> debounceTime(1000)
 
 const input$ = fromEvent(inputBox, "keyup");
