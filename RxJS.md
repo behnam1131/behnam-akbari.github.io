@@ -105,6 +105,13 @@ input$.pipe(
   ).subscribe(console.log);
 
 ```
+
+
+## throttleTime
+
+
+![image/throttleTime](image/throttleTime.PNG){: .center-image }
+
 ```ts
 throttleTime(3000)   //   چاپ مقدار اول مکث 3 ثانیه ای و سپس در صورت ورود دیتا چاپ مجدد مکث 3 ثانیه 
 
