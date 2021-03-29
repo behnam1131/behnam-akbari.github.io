@@ -86,7 +86,14 @@ counter$.pipe(
   });
 ```
 
+
+## debounceTime
+
+
+![image/debounceTime](image/debounceTime.PNG){: .center-image }
+
 ```ts
+
 debounce(() => interval(1000)) <==> debounceTime(1000)
 
 const input$ = fromEvent(inputBox, "keyup");
@@ -98,6 +105,12 @@ input$.pipe(
   ).subscribe(console.log);
 
 ```
+
+
+## throttleTime
+
+![image/throttleTime](image/throttleTime.PNG){: .center-image }
+
 ```ts
 throttleTime(3000)   //   چاپ مقدار اول مکث 3 ثانیه ای و سپس در صورت ورود دیتا چاپ مجدد مکث 3 ثانیه 
 
@@ -105,4 +118,59 @@ throttleTime(3000,asyncScheduler,{   // ورود مقدار مکث 3 ثانیه 
     leading: false,
     trailing: true
   }),
+```
+
+## 
+
+![image/sampleTime](image/sampleTime.PNG){: .center-image }
+
+```ts
+
+click$
+  .pipe(
+    sampleTime(3000),    
+    map(({ clientX, clientY }) => ({
+      clientX,
+      clientY
+    }))
+  ).subscribe(console.log);
+
+
+timer$.pipe(
+  sample(click$)
+).subscribe(console.log);
+```
+
+
+## auditTime
+
+![image/auditTime](image/auditTime.PNG){: .center-image }
+
+```ts 
+click$.pipe(
+  auditTime(4000)
+).subscribe(console.log)
+
+```
+
+
+## concat
+```ts
+![image/concat](image/concat.PNG){: .center-image }
+
+concat(
+  interval$.pipe(take(3)),
+  interval$.pipe(take(2))
+).subscribe(console.log)
+
+interval5000$
+  .pipe(
+    concat(   // قبل از اتمام اجرا میشود یعنی یک بار اجرا میشود
+      delayed$.pipe(startWith("3....")),
+      delayed$.pipe(startWith("2....")),
+      delayed$.pipe(startWith("1....")),
+      delayed$.pipe(startWith("Go !!!"))
+    ),
+    startWith("Are You Ready ?")
+  ).subscribe(console.log);
 ```
