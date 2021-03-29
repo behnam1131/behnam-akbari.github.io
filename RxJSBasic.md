@@ -1,5 +1,5 @@
 ---
-title: RxJS
+title: RxJSBasic
 ---
 
 ## نکات
